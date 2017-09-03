@@ -1,6 +1,11 @@
 package com.paulnaismyth.Entity;
 
+import javax.persistence.ManyToOne;
+
 public class Invoice {
+
+    @ManyToOne
+    private User user;
 
     private int invoiceNumber;
     private int invoiceDate;

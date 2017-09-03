@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class InvoiceService {
@@ -25,4 +26,7 @@ public class InvoiceService {
         return this.invoiceDao.getInvoiceById(invoiceNumber);
     }
 
+    public List<Invoice> findInvoicesByUserId(int id) {
+        return invoiceDao.findInvoicesByUserId(id);
+    }
 }

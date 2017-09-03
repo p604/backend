@@ -1,9 +1,11 @@
 package com.paulnaismyth.Dao;
 import com.paulnaismyth.Entity.Invoice;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -36,5 +38,11 @@ public class InvoiceDao {
     public void insertInvoiceToDb(Invoice invoice) {
         this.invoices.put(invoice.getInvoiceNumber(), invoice);
     }
+
+    @Query
+    public List<Invoice> findInvoicesByUserId(int id){
+        return (List<Invoice>) this.invoices.values();
+    }
+
 
 }
