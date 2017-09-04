@@ -2,6 +2,7 @@ package com.paulnaismyth.Dao;
 import com.paulnaismyth.Entity.User;
 import com.paulnaismyth.Entity.Login;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -18,6 +19,7 @@ import java.util.Collection;
 @Repository
 public class UserDao {
 
+    @Qualifier("dataSource")
     @Autowired
     DataSource dataSource;
 

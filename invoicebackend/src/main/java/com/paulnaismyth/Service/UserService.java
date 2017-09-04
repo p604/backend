@@ -1,9 +1,9 @@
 package com.paulnaismyth.Service;
 
 import com.paulnaismyth.Dao.UserDao;
+import com.paulnaismyth.Entity.Login;
 import com.paulnaismyth.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -20,6 +20,14 @@ public class UserService {
 
     public User getUserById(int id){
         return this.userDao.getUserById(id);
+    }
+
+    public User validateUser(Login login){
+        return this.userDao.validateUser(login);
+    }
+
+    public void register(User user){
+        this.userDao.register(user);
     }
 
 

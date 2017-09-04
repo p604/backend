@@ -21,6 +21,7 @@ public class Invoice {
     private int itemTotal;
     private String terms;
 
+
     public Invoice(int invoiceNumber, int invoiceDate, int dueDate, int balanceDue, String customerName, String customerAddress, String customerEmail, String item, String description, int cost, int tax, int itemTotal, String terms) {
         this.invoiceNumber = invoiceNumber;
         this.invoiceDate = invoiceDate;
