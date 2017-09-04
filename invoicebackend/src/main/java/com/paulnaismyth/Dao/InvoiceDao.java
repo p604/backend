@@ -35,8 +35,8 @@ public class InvoiceDao {
         return this.invoices.get(invoiceNumber);
     }
 
-    public void insertInvoiceToDb(Invoice invoice) {
-        this.invoices.put(invoice.getInvoiceNumber(), invoice);
+    public Invoice insertInvoiceToDb(Invoice invoice) {
+        return this.invoices.put(invoice.getInvoiceNumber(), invoice);
     }
 
     @Query

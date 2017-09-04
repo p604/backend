@@ -18,8 +18,8 @@ public class InvoiceService {
         return this.invoiceDao.getAllInvoices();
     }
 
-    public void insertInvoiceToDb(Invoice invoice){
-        this.invoiceDao.insertInvoiceToDb(invoice);
+    public Invoice insertInvoiceToDb(Invoice invoice){
+        return this.invoiceDao.insertInvoiceToDb(invoice);
     }
 
     public Invoice getInvoiceById(int invoiceNumber){

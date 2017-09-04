@@ -22,6 +22,7 @@ public class UserService {
         return this.userDao.getUserById(id);
     }
 
+
     public void updateUser(User user){
         this.userDao.updateUser(user);
     }
